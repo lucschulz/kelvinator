@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/lay_tempSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtSelectInputTempUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_an_input_temperature_unit" />
+
+        <RadioButton
+            android:id="@+id/radCelcius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radCelcius" />
+
+        <RadioButton
+            android:id="@+id/radFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radFahrenheit" />
+
+        <RadioButton
+            android:id="@+id/radKelvin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radKelvin" />
+
+        <TextView
+            android:id="@+id/txtValueToBeConverted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtValueToBeConverted" />
+
+        <EditText
+            android:id="@+id/txtInputTemp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
