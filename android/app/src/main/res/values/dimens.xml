@@ -1,6 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="lay_weight_unit_notation">1</dimen>
+    <dimen name="lay_weight_unit_notation">4</dimen>
     <dimen name="lay_weight_conversion_result">20</dimen>
 </resources>

@@ -29,7 +29,7 @@
             android:id="@+id/radCelcius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radCelcius" />
+            android:text="@string/radCelsius" />
 
         <RadioButton
             android:id="@+id/radFahrenheit"
@@ -97,7 +97,7 @@
                     android:id="@+id/txtUnitF_F"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="@dimen/lay_weight_unit_notation"
                     android:text="@string/txtUnitNotation_F" />
 
                 <TextView

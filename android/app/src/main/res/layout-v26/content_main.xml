@@ -28,7 +28,7 @@
             android:id="@+id/radCelcius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radCelcius" />
+            android:text="@string/radCelsius" />
 
         <RadioButton
             android:id="@+id/radFahrenheit"
