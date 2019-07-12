@@ -55,5 +55,54 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:autofillHints="" />
+
+        <LinearLayout
+            android:id="@+id/lay_Results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layResult_C"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtUnitC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtUnitNotation_C" />
+
+                <TextView
+                    android:id="@+id/txtResult_C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layResult_F"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtUnitF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txtUnitNotation_F" />
+
+                <TextView
+                    android:id="@+id/txtResult_F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20" />
+            </LinearLayout>
+
+
+        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
