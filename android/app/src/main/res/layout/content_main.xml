@@ -45,8 +45,10 @@
                     android:layout_height="wrap_content"
                     android:autofillHints="Enter the temperature to convert."
                     android:ems="10"
-                    android:inputType="numberDecimal" tools:targetApi="o"
-                    tools:ignore="LabelFor" />
+                    android:inputType="numberDecimal"
+                    android:textAlignment="textEnd"
+                    tools:ignore="LabelFor"
+                    tools:targetApi="o" />
 
             </LinearLayout>
 
