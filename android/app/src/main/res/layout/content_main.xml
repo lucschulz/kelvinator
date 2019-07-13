@@ -16,7 +16,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/lay_TopLeftPane"
@@ -44,7 +45,8 @@
                     android:layout_height="wrap_content"
                     android:autofillHints="Enter the temperature to convert."
                     android:ems="10"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" tools:targetApi="o"
+                    tools:ignore="LabelFor" />
 
             </LinearLayout>
 
