@@ -19,13 +19,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/lay_TopLeftPane"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/lay_topLeft"
+                android:id="@+id/lay_ValueToConvert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -51,6 +52,7 @@
                 android:id="@+id/lay_Results"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -133,6 +135,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lay_InputUnits"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -146,6 +149,7 @@
                 android:textSize="18sp" />
 
             <RadioGroup
+                android:id="@+id/rGroup_Units"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">

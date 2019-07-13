@@ -11,7 +11,7 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:id="@+id/lay_topLeft"
+        android:id="@+id/lay_ValueToConvert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
