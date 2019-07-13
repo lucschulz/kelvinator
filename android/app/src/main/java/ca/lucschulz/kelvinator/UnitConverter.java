@@ -9,25 +9,25 @@ enum Units {
 class UnitConverter {
 
     private Units inputUnit;
-    private int inputValue;
+    private double inputValue;
 
     private double outputC;
     private double outputF;
     private double outputK;
 
-    public double getOutputC() {
-        return outputC;
+    public String getOutputC() {
+        return String.valueOf(outputC);
     }
 
-    public double getOutputF() {
-        return outputF;
+    public String getOutputF() {
+        return String.valueOf(outputF);
     }
 
-    public double getOutputK() {
-        return outputK;
+    public String getOutputK() {
+        return String.valueOf(outputK);
     }
 
-    UnitConverter(Units inputUnit, int inputValue) {
+    UnitConverter(Units inputUnit, double inputValue) {
         this.inputUnit = inputUnit;
         this.inputValue = inputValue;
 

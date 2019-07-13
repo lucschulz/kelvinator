@@ -16,6 +16,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.Buffer;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -83,7 +85,17 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                UnitConverter uc = new UnitConverter(UnitConverter.Units.K, -273);
+                double inputValue = Double.parseDouble(s.toString());
+                UnitConverter uc = new UnitConverter(Units.K, inputValue);
+
+                TextView tvC = findViewById(R.id.txtResult_C);
+                TextView tvF = findViewById(R.id.txtResult_F);
+                TextView tvK = findViewById(R.id.txtResult_K);
+
+                tvC.setText(uc.getOutputC());
+                tvF.setText(uc.getOutputF());
+                tvK.setText(uc.getOutputK());
+
 
                 Toast.makeText(act, s.toString(), Toast.LENGTH_LONG).show();
             }
