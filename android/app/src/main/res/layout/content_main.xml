@@ -14,65 +14,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/lay_tempSelect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txtSelectInputTempUnit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/select_an_input_temperature_unit" />
-
-            <RadioButton
-                android:id="@+id/radCelcius"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radCelsius" />
-
-            <RadioButton
-                android:id="@+id/radFahrenheit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radFahrenheit" />
-
-            <RadioButton
-                android:id="@+id/radKelvin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radKelvin" />
-
-        </LinearLayout>
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtValueToBeConverted"
+            <LinearLayout
+                android:id="@+id/lay_topLeft"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txtValueToBeConverted" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/txtInputTemp"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:autofillHints="Enter the temperature to convert."
-                android:ems="10"
-                android:inputType="numberDecimal" />
+                <TextView
+                    android:id="@+id/txtValueToBeConverted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtValueToBeConverted"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/txtInputTemp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Enter the temperature to convert."
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lay_Results"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -84,7 +62,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
@@ -92,20 +70,21 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
-                        android:text="@string/txtResult_C" />
+                        android:text="@string/txtResult_C"
+                        android:textAlignment="textEnd" />
 
                     <TextView
                         android:id="@+id/txtUnitC"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
                         android:text="@string/txtUnitNotation_C" />
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
@@ -113,12 +92,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
-                        android:text="@string/txtResult_F" />
+                        android:text="@string/txtResult_F"
+                        android:textAlignment="textEnd" />
 
                     <TextView
                         android:id="@+id/txtUnitF_F"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
                         android:text="@string/txtUnitNotation_F" />
 
@@ -126,7 +107,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
@@ -134,19 +115,64 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
-                        android:text="@string/txtResult_F" />
+                        android:text="@string/txtResult_F"
+                        android:textAlignment="textEnd" />
 
                     <TextView
                         android:id="@+id/txtUnitNotation_K"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
                         android:text="@string/radKelvin" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtHeader_SelectUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_an_input_temperature_unit"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radCelsius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radCelsius" />
+
+                <RadioButton
+                    android:id="@+id/radFahrenheit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radFahrenheit" />
+
+                <RadioButton
+                    android:id="@+id/radKelvin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radKelvin" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

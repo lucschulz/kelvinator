@@ -5,7 +5,7 @@
     <string name="radCelsius">Celsius</string>
     <string name="radKelvin">Kelvin</string>
     <string name="radFahrenheit">Fahrenheit</string>
-    <string name="txtValueToBeConverted">Enter the value to be converted</string>
+    <string name="txtValueToBeConverted">Enter value to convert</string>
 
     <string name="txtUnitNotation_C">℃</string>
     <string name="txtUnitNotation_F">℉</string>

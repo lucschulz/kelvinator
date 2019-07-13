@@ -11,7 +11,7 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:id="@+id/lay_tempSelect"
+        android:id="@+id/lay_topLeft"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -25,7 +25,7 @@
             android:text="@string/select_an_input_temperature_unit" />
 
         <RadioButton
-            android:id="@+id/radCelcius"
+            android:id="@+id/radCelsius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/radCelsius" />
