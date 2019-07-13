@@ -73,7 +73,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
                         android:text="@string/txtResult_C"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/txtSize_results" />
 
                     <TextView
                         android:id="@+id/txtUnitC"
@@ -81,7 +82,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
-                        android:text="@string/txtUnitNotation_C" />
+                        android:text="@string/txtUnitNotation_C"
+                        android:textSize="@dimen/txtSize_results" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -95,7 +97,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
                         android:text="@string/txtResult_F"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/txtSize_results" />
 
                     <TextView
                         android:id="@+id/txtUnitF_F"
@@ -103,7 +106,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
-                        android:text="@string/txtUnitNotation_F" />
+                        android:text="@string/txtUnitNotation_F"
+                        android:textSize="@dimen/txtSize_results" />
 
                 </LinearLayout>
 
@@ -118,7 +122,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="@dimen/lay_weight_conversion_result"
                         android:text="@string/txtResult_F"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/txtSize_results" />
 
                     <TextView
                         android:id="@+id/txtUnitNotation_K"
@@ -126,7 +131,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_weight="@dimen/lay_weight_unit_notation"
-                        android:text="@string/radKelvin" />
+                        android:text="@string/radKelvin"
+                        android:textSize="@dimen/txtSize_results" />
 
                 </LinearLayout>
 
