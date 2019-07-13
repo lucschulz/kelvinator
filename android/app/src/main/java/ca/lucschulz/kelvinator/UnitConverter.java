@@ -41,16 +41,19 @@ class UnitConverter {
         switch (inputUnit)
         {
             case C:
+                outputC = inputValue;
                 outputK = convertCtoK(inputValue);
                 outputF = convertCtoF(inputValue);
                 break;
 
             case F:
+                outputF = inputValue;
                 outputK = convertFtoK(inputValue);
                 outputC = convertFtoC(inputValue);
                 break;
 
             case K:
+                outputK = inputValue;
                 outputF = convertKtoF(inputValue);
                 outputC = convertKtoC(inputValue);
                 break;

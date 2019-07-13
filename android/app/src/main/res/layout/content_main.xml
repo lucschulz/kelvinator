@@ -67,27 +67,15 @@
             android:id="@+id/lay_ValueToConvert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtValueToBeConverted"
+            <include
+                layout="@layout/convert_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txtValueToBeConverted"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content" />
 
-            <EditText
-                android:id="@+id/txtInputTemp"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:autofillHints="Enter the temperature to convert."
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="textEnd"
-                tools:ignore="LabelFor"
-                tools:targetApi="o" />
-
-            <include layout="@layout/results" />
+            <include layout="@layout/results_main" />
 
         </LinearLayout>
 

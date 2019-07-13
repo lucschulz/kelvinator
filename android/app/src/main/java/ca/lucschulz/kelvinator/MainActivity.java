@@ -85,18 +85,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 double inputValue = Double.parseDouble(s.toString());
-                UnitConverter uc = new UnitConverter(Units.K, inputValue);
-
-                TextView tvC = findViewById(R.id.txtResult_C);
-                TextView tvF = findViewById(R.id.txtResult_F);
-                TextView tvK = findViewById(R.id.txtResult_K);
-
-                tvC.setText(uc.getOutputC());
-                tvF.setText(uc.getOutputF());
-                tvK.setText(uc.getOutputK());
+                RadioButton selectedC = findViewById(R.id.radCelsius);
+                RadioButton selectedF = findViewById(R.id.radFahrenheit);
+                RadioButton selectedK = findViewById(R.id.radKelvin);
 
 
-                Toast.makeText(act, s.toString(), Toast.LENGTH_LONG).show();
+                UnitConverter uc = null;
+
+                if (selectedC.isChecked()) {
+                    uc = new UnitConverter(Units.C, inputValue);
+                }
+                else if (selectedF.isChecked()) {
+                    uc = new UnitConverter(Units.F, inputValue);
+                }
+                else if (selectedK.isChecked()) {
+                    uc = new UnitConverter(Units.K, inputValue);
+                }
+
+
+                if (uc != null) {
+                    TextView tvC = findViewById(R.id.txtResult_C);
+                    TextView tvF = findViewById(R.id.txtResult_F);
+                    TextView tvK = findViewById(R.id.txtResult_K);
+
+                    tvC.setText(uc.getOutputC());
+                    tvF.setText(uc.getOutputF());
+                    tvK.setText(uc.getOutputK());
+                }
             }
         });
     }
