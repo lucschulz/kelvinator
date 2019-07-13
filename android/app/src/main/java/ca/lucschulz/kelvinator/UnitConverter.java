@@ -1,7 +1,5 @@
 package ca.lucschulz.kelvinator;
 
-import java.text.DecimalFormat;
-
 enum Units {
     C,
     F,
@@ -17,17 +15,17 @@ class UnitConverter {
     private double outputF;
     private double outputK;
 
-    public String getOutputC() {
+    String getOutputC() {
         double output = Math.round(outputC * 100.0) / 100.0;
         return String.valueOf(output);
     }
 
-    public String getOutputF() {
+    String getOutputF() {
         double output = Math.round(outputF * 100.0) / 100.0;
         return String.valueOf(output);
     }
 
-    public String getOutputK() {
+    String getOutputK() {
         double output = Math.round(outputK * 100.0) / 100.0;
         return String.valueOf(output);
     }
