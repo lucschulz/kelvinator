@@ -13,12 +13,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 
 public class MainActivity extends AppCompatActivity {
+
+    RadioButton radioC;
+    RadioButton radioF;
+    RadioButton radioK;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        RadioButton btnCelsius = findViewById(R.id.radCelsius);
-        btnCelsius.setChecked(true);
-
+        configureRadioGroup();
         configureInputValueHandling();
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -65,11 +67,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void configureRadioGroup() {
+        radioC = findViewById(R.id.radCelsius);
+        radioF = findViewById(R.id.radFahrenheit);
+        radioK = findViewById(R.id.radKelvin);
+
+        radioC.setChecked(true);
+
+        RadioGroup rg = findViewById(R.id.rGroup_Units);
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                TextView currentUnitSymbol = findViewById(R.id.txt_CurrentUnitSymbol);
+
+                if (radioC.isChecked()) {
+                    currentUnitSymbol.setText(R.string.txtUnitNotation_C);
+                }
+                else if (radioF.isChecked()) {
+                    currentUnitSymbol.setText(R.string.txtUnitNotation_F);
+                }
+                else if (radioK.isChecked()) {
+                    currentUnitSymbol.setText(R.string.txtUnitNotation_K);
+                }
+            }
+        });
+    }
+
+
     private void configureInputValueHandling() {
         EditText inputValue = findViewById(R.id.txtInputTemp);
         inputValue.setText("0", TextView.BufferType.EDITABLE);
 
-        final Activity act = this;
 
         inputValue.addTextChangedListener(new TextWatcher() {
             @Override
@@ -84,34 +112,33 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                double inputValue = Double.parseDouble(s.toString());
-                RadioButton selectedC = findViewById(R.id.radCelsius);
-                RadioButton selectedF = findViewById(R.id.radFahrenheit);
-                RadioButton selectedK = findViewById(R.id.radKelvin);
 
+               if (!s.toString().equals("")) {
+                    double inputValue = Double.parseDouble(s.toString());
+                    UnitConverter uc = null;
 
-                UnitConverter uc = null;
+                    if (radioC.isChecked()) {
+                        uc = new UnitConverter(Units.C, inputValue);
+                    }
+                    else if (radioF.isChecked()) {
+                        uc = new UnitConverter(Units.F, inputValue);
+                    }
+                    else if (radioK.isChecked()) {
+                        uc = new UnitConverter(Units.K, inputValue);
+                    }
 
-                if (selectedC.isChecked()) {
-                    uc = new UnitConverter(Units.C, inputValue);
+                    if (uc != null) {
+                        TextView tvC = findViewById(R.id.txtResult_C);
+                        TextView tvF = findViewById(R.id.txtResult_F);
+                        TextView tvK = findViewById(R.id.txtResult_K);
+
+                        tvC.setText(uc.getOutputC());
+                        tvF.setText(uc.getOutputF());
+                        tvK.setText(uc.getOutputK());
+                    }
                 }
-                else if (selectedF.isChecked()) {
-                    uc = new UnitConverter(Units.F, inputValue);
-                }
-                else if (selectedK.isChecked()) {
-                    uc = new UnitConverter(Units.K, inputValue);
-                }
 
 
-                if (uc != null) {
-                    TextView tvC = findViewById(R.id.txtResult_C);
-                    TextView tvF = findViewById(R.id.txtResult_F);
-                    TextView tvK = findViewById(R.id.txtResult_K);
-
-                    tvC.setText(uc.getOutputC());
-                    tvF.setText(uc.getOutputF());
-                    tvK.setText(uc.getOutputK());
-                }
             }
         });
     }
