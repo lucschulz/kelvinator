@@ -29,14 +29,14 @@
                 android:layout_height="wrap_content"
                 android:autofillHints="Enter the temperature to convert."
                 android:ems="10"
-                android:inputType="numberDecimal"
+                android:inputType="numberSigned|number|numberDecimal"
                 android:textAlignment="textEnd"
                 tools:ignore="LabelFor"
                 tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/txt_CurrentUnitSymbol"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/txt_CurrentUnitSymbol" />

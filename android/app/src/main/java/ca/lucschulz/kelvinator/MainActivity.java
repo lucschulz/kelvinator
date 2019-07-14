@@ -1,6 +1,5 @@
 package ca.lucschulz.kelvinator;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "info@tesscorp.ca", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -89,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
                 else if (radioK.isChecked()) {
                     currentUnitSymbol.setText(R.string.txtUnitNotation_K);
                 }
+
+                EditText editText = findViewById(R.id.txtInputTemp);
+                String inputValueAsString = editText.getText().toString();
+
+                if (!inputValueAsString.equals("") && !inputValueAsString.equals("-")) {
+                    double inputValue = Double.parseDouble(inputValueAsString);
+                    updateResults(inputValue);
+                }
             }
         });
     }
@@ -96,9 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void configureInputValueHandling() {
         EditText inputValue = findViewById(R.id.txtInputTemp);
-        inputValue.setText("0", TextView.BufferType.EDITABLE);
-
-
         inputValue.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -112,34 +116,35 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
-               if (!s.toString().equals("")) {
+                if (!s.toString().equals("") && !s.toString().equals("-")) {
                     double inputValue = Double.parseDouble(s.toString());
-                    UnitConverter uc = null;
-
-                    if (radioC.isChecked()) {
-                        uc = new UnitConverter(Units.C, inputValue);
-                    }
-                    else if (radioF.isChecked()) {
-                        uc = new UnitConverter(Units.F, inputValue);
-                    }
-                    else if (radioK.isChecked()) {
-                        uc = new UnitConverter(Units.K, inputValue);
-                    }
-
-                    if (uc != null) {
-                        TextView tvC = findViewById(R.id.txtResult_C);
-                        TextView tvF = findViewById(R.id.txtResult_F);
-                        TextView tvK = findViewById(R.id.txtResult_K);
-
-                        tvC.setText(uc.getOutputC());
-                        tvF.setText(uc.getOutputF());
-                        tvK.setText(uc.getOutputK());
-                    }
+                    updateResults(inputValue);
                 }
-
-
             }
         });
+    }
+
+    private void updateResults(double inputValue) {
+        UnitConverter uc = null;
+
+        if (radioC.isChecked()) {
+            uc = new UnitConverter(Units.C, inputValue);
+        }
+        else if (radioF.isChecked()) {
+            uc = new UnitConverter(Units.F, inputValue);
+        }
+        else if (radioK.isChecked()) {
+            uc = new UnitConverter(Units.K, inputValue);
+        }
+
+        if (uc != null) {
+            TextView tvC = findViewById(R.id.txtResult_C);
+            TextView tvF = findViewById(R.id.txtResult_F);
+            TextView tvK = findViewById(R.id.txtResult_K);
+
+            tvC.setText(uc.getOutputC());
+            tvF.setText(uc.getOutputF());
+            tvK.setText(uc.getOutputK());
+        }
     }
 }
