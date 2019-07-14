@@ -137,8 +137,6 @@ public class MainActivity extends AppCompatActivity {
                         tvK.setText(uc.getOutputK());
                     }
                 }
-
-
             }
         });
     }
