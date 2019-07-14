@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lay_Results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtHeader_Results"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtResult_C"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_C"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/txtSize_results" />
+
+            <TextView
+                android:id="@+id/txtUnitC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnitNotation_C"
+                android:textSize="@dimen/txtSize_results" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtResult_F"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_F"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/txtSize_results" />
+
+            <TextView
+                android:id="@+id/txtUnitF_F"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnitNotation_F"
+                android:textSize="@dimen/txtSize_results" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtResult_K"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_F"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/txtSize_results" />
+
+            <TextView
+                android:id="@+id/txtUnitNotation_K"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/radKelvin"
+                android:textSize="@dimen/txtSize_results" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
