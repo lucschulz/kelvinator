@@ -1,21 +1,28 @@
 package ca.lucschulz.kelvinator;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
-
 public class MainActivity extends AppCompatActivity {
+
+    RadioButton radioC;
+    RadioButton radioF;
+    RadioButton radioK;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        RadioButton btnCelsius = findViewById(R.id.radCelsius);
-        btnCelsius.setChecked(true);
-
-        EditText inputValue = findViewById(R.id.txtInputTemp);
-        inputValue.setText("0", TextView.BufferType.EDITABLE);
-
-        inputValue.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                return false;
-            }
-        });
+        configureRadioGroup();
+        configureInputValueHandling();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
