@@ -19,17 +19,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtAppName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Kelvinator"
+            android:text="@string/txtKelvinator"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgTesseractLogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -37,17 +37,17 @@
             app:srcCompat="@drawable/tesseract_circle" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtVersion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="v1.4"
+            android:text="@string/txtAppVersion"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txtTesseractStrategies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tesseract Strategies"
+            android:text="@string/txtTesseractStrategies"
             android:textAlignment="center" />
     </LinearLayout>
 
