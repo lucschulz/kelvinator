@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class About extends AppCompatActivity {
 
@@ -15,6 +16,8 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        setCurrentVersionNumber();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -30,12 +33,15 @@ public class About extends AppCompatActivity {
         Intent email = new Intent(Intent.ACTION_SEND);
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{ "info@tesscorp.ca"});
         email.putExtra(Intent.EXTRA_SUBJECT, "Kelvinator");
-        email.putExtra(Intent.EXTRA_TEXT, "Enter message here.");
 
-        //need this to prompts email client only
+        //need this to prompt for email client only
         email.setType("message/rfc822");
 
         startActivity(Intent.createChooser(email, "Choose an Email client :"));
     }
 
+    private void setCurrentVersionNumber() {
+        TextView versionLabel = findViewById(R.id.txtVersion);
+        versionLabel.setText(BuildConfig.VERSION_NAME);
+    }
 }
