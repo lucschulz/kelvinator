@@ -33,15 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         configureRadioGroup();
         configureInputValueHandling();
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "info@tesscorp.ca", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
