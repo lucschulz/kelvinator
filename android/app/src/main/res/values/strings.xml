@@ -16,5 +16,6 @@
     <string name="txtResult_F">0</string>
     <string name="txtResult_K">0</string>
     <string name="txt_CurrentUnitSymbol">℃</string>
+    <string name="title_activity_about">About</string>
 
 </resources>
