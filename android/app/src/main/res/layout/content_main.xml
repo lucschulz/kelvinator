@@ -5,7 +5,6 @@
     android:id="@+id/lay_Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
     android:padding="10dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
