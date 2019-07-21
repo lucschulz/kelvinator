@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp">
 
     <LinearLayout
+        android:id="@+id/lay_InputUnits"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/border"
@@ -15,36 +16,38 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtValueToBeConverted"
+            android:id="@+id/txtHeader_SelectUnit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txtValueToBeConverted"
+            android:text="@string/select_an_input_temperature_unit"
             android:textSize="18sp" />
 
-        <LinearLayout
+        <RadioGroup
+            android:id="@+id/rGroup_Units"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/txtInputTemp"
-                android:layout_width="100dp"
+            <RadioButton
+                android:id="@+id/radCelsius"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints="Enter the temperature to convert."
-                android:ems="10"
-                android:inputType="numberSigned|number|numberDecimal"
-                android:textAlignment="textEnd"
-                tools:ignore="LabelFor"
-                tools:targetApi="o" />
+                android:text="@string/radCelsius" />
 
-            <TextView
-                android:id="@+id/txt_CurrentUnitSymbol"
-                android:layout_width="0dp"
+            <RadioButton
+                android:id="@+id/radFahrenheit"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/txt_CurrentUnitSymbol" />
-        </LinearLayout>
+                android:text="@string/radFahrenheit" />
+
+            <RadioButton
+                android:id="@+id/radKelvin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radKelvin" />
+
+        </RadioGroup>
+
 
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>
