@@ -41,7 +41,9 @@ public class About extends AppCompatActivity {
     }
 
     private void setCurrentVersionNumber() {
+        String appVersion = R.string.txtAppVersion + BuildConfig.VERSION_NAME;
+
         TextView versionLabel = findViewById(R.id.txtVersion);
-        versionLabel.setText(BuildConfig.VERSION_NAME);
+        versionLabel.setText(appVersion);
     }
 }

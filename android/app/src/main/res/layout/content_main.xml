@@ -22,18 +22,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <include
-            layout="@layout/units_main"
+            layout="@layout/main_units"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <include
-            layout="@layout/convert_main"
+            layout="@layout/main_convert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp" />
 
         <include
-            layout="@layout/results_main"
+            layout="@layout/main_results"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

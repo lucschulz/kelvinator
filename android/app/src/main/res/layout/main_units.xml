@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp">
+
+    <LinearLayout
+        android:id="@+id/lay_InputUnits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_blue"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtHeader_SelectUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_an_input_temperature_unit"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup_Units"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radCelsius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radCelsius" />
+
+            <RadioButton
+                android:id="@+id/radFahrenheit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radFahrenheit" />
+
+            <RadioButton
+                android:id="@+id/radKelvin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radKelvin" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

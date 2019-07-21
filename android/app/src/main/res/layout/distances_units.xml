@@ -1,53 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="40dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/lay_InputUnits"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/border"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_red"
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtHeader_SelectUnit"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_an_input_temperature_unit"
+            android:text="TextView"
             android:textSize="18sp" />
 
         <RadioGroup
-            android:id="@+id/rGroup_Units"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radCelsius"
+                android:id="@+id/radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radCelsius" />
+                android:text="RadioButton" />
 
             <RadioButton
-                android:id="@+id/radFahrenheit"
+                android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radFahrenheit" />
+                android:text="RadioButton" />
 
             <RadioButton
-                android:id="@+id/radKelvin"
+                android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radKelvin" />
-
+                android:text="RadioButton" />
         </RadioGroup>
-
-
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

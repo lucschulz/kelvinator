@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Distances"
+            android:label="@string/title_activity_distances"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ca.lucschulz.kelvinator.MainActivity" />
+        </activity>
+        <activity
             android:name=".About"
             android:label="@string/title_activity_about"
             android:parentActivityName=".MainActivity"

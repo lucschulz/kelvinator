@@ -20,7 +20,10 @@
     <string name="menu_about">About</string>
     <string name="imgTesseractLogo">Logo</string>
     <string name="txtKelvinator">Kelvinator</string>
-    <string name="txtAppVersion">v1.4</string>
+    <string name="txtAppVersion">v</string>
     <string name="txtTesseractStrategies">Tesseract Strategies</string>
+    <string name="title_activity_distances">Distances</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 </resources>
