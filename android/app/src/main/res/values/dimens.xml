@@ -1,7 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="lay_weight_conversion_result">2</dimen>
+    <dimen name="lay_weight_conversion_result">3</dimen>
     <dimen name="lay_weight_unit_notation">5</dimen>
 
     <!-- RESULTS FONTS -->
