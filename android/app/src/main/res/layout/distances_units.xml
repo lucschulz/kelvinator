@@ -19,7 +19,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/title_activity_distances"
             android:textSize="18sp" />
 
         <RadioGroup
@@ -30,19 +30,14 @@
                 android:id="@+id/radioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/txt_metric" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/txt_imperial" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="RadioButton" />
         </RadioGroup>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

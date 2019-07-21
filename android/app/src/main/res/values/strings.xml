@@ -25,5 +25,7 @@
     <string name="title_activity_distances">Distances</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="txt_metric">Metric</string>
+    <string name="txt_imperial">Imperial</string>
 
 </resources>
