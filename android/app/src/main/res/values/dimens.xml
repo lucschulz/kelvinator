@@ -6,5 +6,6 @@
 
     <!-- RESULTS FONTS -->
     <dimen name="txtSize_results">16sp</dimen>
+    <dimen name="unitsMarginStart">5dp</dimen>
 
 </resources>

@@ -27,5 +27,14 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="txt_metric">Metric</string>
     <string name="txt_imperial">Imperial</string>
+    <string name="txtResult_dm">0</string>
+    <string name="txtUnit_dm">dm</string>
+    <string name="txtUnit_m">m</string>
+    <string name="txtResult_m">0</string>
+    <string name="txtResult_cm">0</string>
+    <string name="txtUnit_cm">cm</string>
+    <string name="txtUnit_mm">mm</string>
+    <string name="txtResult_mm">0</string>
+    <string name="txtDistResultsHeader">Results</string>
 
 </resources>

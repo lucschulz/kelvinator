@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lay_DistancesResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_red"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvDistResultsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtDistResultsHeader"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvResult_mm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_mm"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/tvUnit_mm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unitsMarginStart"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnit_mm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvResult_cm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_cm"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/tvUnit_cm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unitsMarginStart"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnit_cm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvResult_dm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_dm"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/tvUnit_dm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unitsMarginStart"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnit_dm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvResult_m"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/lay_weight_conversion_result"
+                android:text="@string/txtResult_m"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/tvUnit_m"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/unitsMarginStart"
+                android:layout_weight="@dimen/lay_weight_unit_notation"
+                android:text="@string/txtUnit_m" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
