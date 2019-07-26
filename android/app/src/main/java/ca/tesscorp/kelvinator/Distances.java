@@ -1,4 +1,4 @@
-package ca.lucschulz.kelvinator;
+package ca.tesscorp.kelvinator;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

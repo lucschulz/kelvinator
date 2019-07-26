@@ -1,4 +1,4 @@
-package ca.lucschulz.kelvinator;
+package ca.tesscorp.kelvinator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

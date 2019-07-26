@@ -1,4 +1,4 @@
-package ca.lucschulz.kelvinator;
+package ca.tesscorp.kelvinator;
 
 enum Units {
     C,

@@ -1,4 +1,4 @@
-package ca.lucschulz.kelvinator;
+package ca.tesscorp.kelvinator;
 
 import org.junit.Test;
 
