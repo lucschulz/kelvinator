@@ -6,7 +6,7 @@ enum Units {
     K
 }
 
-class UnitConverter {
+public class UnitConverter {
 
     private Units inputUnit;
     private double inputValue;
